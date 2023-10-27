@@ -229,17 +229,21 @@ class WaifuDiffusionInterrogator(Interrogator):
         print(f"Loading {self.name} model file from {self.kwargs['repo_id']}")
 
         model_path = Path(hf_hub_download(
-            **self.kwargs, filename=self.model_path))
+            **self.kwargs, filename='model.onnx'))
         tags_path = Path(hf_hub_download(
-            **self.kwargs, filename=self.tags_path))
+            **self.kwargs, filename='selected_tags.csv'))
         return model_path, tags_path
 
+    def check_model_exist(self):
+        return self.model_path.exists() and self.tags_path.exists()
+
     def load(self) -> None:
-        if self.model_path == 'model.onnx' and self.tags_path == 'selected_tags.csv':
-            model_path, tags_path = self.download()
-        else:
+        
+        if self.model_path != 'model.onnx' and self.tags_path != 'selected_tags.csv' and self.check_model_exist():
             model_path = self.model_path
             tags_path = self.tags_path
+        else:
+            model_path, tags_path = self.download()
 
         # only one of these packages should be installed at a time in any one environment
         # https://onnxruntime.ai/docs/get-started/with-python.html#install-onnx-runtime

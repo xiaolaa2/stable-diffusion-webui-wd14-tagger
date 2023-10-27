@@ -48,29 +48,29 @@ def refresh_interrogators() -> List[str]:
             model_path=Path(wd_tagger_model_path, 'wd-v1-4-swinv2-tagger-v2','model.onnx'),
             tags_path=Path(wd_tagger_model_path, 'wd-v1-4-swinv2-tagger-v2','selected_tags.csv')
         ),
-        'wd14-convnextv2-v2-git': WaifuDiffusionInterrogator(
-            'wd14-convnextv2-v2',
-            repo_id='SmilingWolf/wd-v1-4-convnextv2-tagger-v2',
-        ),
-        'wd14-vit-v2-git': WaifuDiffusionInterrogator(
-            'wd14-vit-v2-git',
-            repo_id='SmilingWolf/wd-v1-4-vit-tagger-v2'
-        ),
-        'wd14-convnext-v2-git': WaifuDiffusionInterrogator(
-            'wd14-convnext-v2-git',
-            repo_id='SmilingWolf/wd-v1-4-convnext-tagger-v2'
-        ),
-        'wd14-swinv2-v2-git': WaifuDiffusionInterrogator(
-            'wd14-swinv2-v2-git',
-            repo_id='SmilingWolf/wd-v1-4-swinv2-tagger-v2'
-        ),
-        'wd14-vit': WaifuDiffusionInterrogator(
-            'wd14-vit',
-            repo_id='SmilingWolf/wd-v1-4-vit-tagger'),
-        'wd14-convnext': WaifuDiffusionInterrogator(
-            'wd14-convnext',
-            repo_id='SmilingWolf/wd-v1-4-convnext-tagger'
-        ),
+        # 'wd14-convnextv2-v2-git': WaifuDiffusionInterrogator(
+        #     'wd14-convnextv2-v2',
+        #     repo_id='SmilingWolf/wd-v1-4-convnextv2-tagger-v2',
+        # ),
+        # 'wd14-vit-v2-git': WaifuDiffusionInterrogator(
+        #     'wd14-vit-v2-git',
+        #     repo_id='SmilingWolf/wd-v1-4-vit-tagger-v2'
+        # ),
+        # 'wd14-convnext-v2-git': WaifuDiffusionInterrogator(
+        #     'wd14-convnext-v2-git',
+        #     repo_id='SmilingWolf/wd-v1-4-convnext-tagger-v2'
+        # ),
+        # 'wd14-swinv2-v2-git': WaifuDiffusionInterrogator(
+        #     'wd14-swinv2-v2-git',
+        #     repo_id='SmilingWolf/wd-v1-4-swinv2-tagger-v2'
+        # ),
+        # 'wd14-vit': WaifuDiffusionInterrogator(
+        #     'wd14-vit',
+        #     repo_id='SmilingWolf/wd-v1-4-vit-tagger'),
+        # 'wd14-convnext': WaifuDiffusionInterrogator(
+        #     'wd14-convnext',
+        #     repo_id='SmilingWolf/wd-v1-4-convnext-tagger'
+        # ),
     }
 
     # load deepdanbooru project
