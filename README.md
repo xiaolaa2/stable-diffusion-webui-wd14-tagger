@@ -34,7 +34,7 @@ I didn't make any models, and most of the code was heavily borrowed from the [De
               │
               ...
          ```
-      2. If no model in local it will Downloads automatically from the [HuggingFace repository](https://huggingface.co/SmilingWolf/wd-v1-4-vit-tagger) the first time you run it.(not test)
+      2. If no model in local it will Downloads automatically from the [HuggingFace repository](https://huggingface.co/SmilingWolf/wd-v1-4-vit-tagger) the first time you run it.(I haven't test this)
 `
    - #### *DeepDanbooru*
       1. Various model files can be found below.
