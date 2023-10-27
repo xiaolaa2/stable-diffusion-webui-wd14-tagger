@@ -22,7 +22,7 @@ I didn't make any models, and most of the code was heavily borrowed from the [De
 1. *(optional)* Add interrogate model
    - #### [*Waifu Diffusion 1.4 Tagger by MrSmilingWolf*](docs/what-is-wd14-tagger.md)
      1. Use model in local
-        - manauly download the model from [HuggingFace repository](https://huggingface.co/SmilingWolf/wd-v1-4-vit-tagger) and place in `${your stable-dffusion-webui models path}/wd-tagger/${model_name}` examle: `/home/stable-diffusion-webui-my/models/wd-tagger/wd-v1-4-vit-tagger-v2
+        - manauly download the model from [HuggingFace repository](https://huggingface.co/SmilingWolf/wd-v1-4-vit-tagger) and place in `${your stable-dffusion-webui models path}/wd-tagger/${model_name}` examle: `/home/stable-diffusion-webui-my/models/wd-tagger/wd-v1-4-vit-tagger-v2`
         - The file structure should look like:
            ```
             models/
