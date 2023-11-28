@@ -1,80 +1,37 @@
-***This branch is unmaintained!***
-https://github.com/toriato/stable-diffusion-webui-wd14-tagger/issues/108
----
-https://github.com/picobyte/stable-diffusion-webui-wd14-tagger
+# Tagger for [Automatic1111&#39;s WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui)、
+
+## 相对于原版的改动
+
+在使用wd-tagger模型的时候，会先在本地路径中搜索模型，如果搜索不到才到Huggingface中下载。
 
 
-# Tagger for [Automatic1111's WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
-Interrogate booru style tags for single or multiple image files using various models, such as DeepDanbooru.
+## 安装方式
 
-[한국어를 사용하시나요? 여기에 한국어 설명서가 있습니다!](README.ko.md)
+1. *在webui内安装*
 
-## Disclaimer
-I didn't make any models, and most of the code was heavily borrowed from the [DeepDanbooru](https://github.com/KichangKim/DeepDanbooru) and MrSmillingWolf's tagger.
+*Extensions* -> *Install from URL* -> Enter URL of this repository -> Press *Install* button
 
-## Installation
-1. *Extensions* -> *Install from URL* -> Enter URL of this repository -> Press *Install* button
-   - or clone this repository under `extensions/`
-      ```sh
-      $ git clone https://github.com/toriato/stable-diffusion-webui-wd14-tagger.git extensions/tagger
-      ```
+2. 克隆当前仓库到 `extensions/里`
 
-1. *(optional)* Add interrogate model
-   - #### [*Waifu Diffusion 1.4 Tagger by MrSmilingWolf*](docs/what-is-wd14-tagger.md)
-     1. Use model in local
-        - manauly download the model from [HuggingFace repository](https://huggingface.co/SmilingWolf/wd-v1-4-vit-tagger) and place in `${your stable-dffusion-webui models path}/wd-tagger/${model_name}` examle: `/home/stable-diffusion-webui-my/models/wd-tagger/wd-v1-4-vit-tagger-v2`
-        - The file structure should look like:
-           ```
-            models/
-            └╴wd-tagger/
-              ├╴wd-v1-4-vit-tagger-v2/
-              │ ├╴model.onnx
-              │ ├╴selected_tags.csv
-              │ └╴...
-              │
-              ...
-      2. If no model in local it will Downloads automatically from the [HuggingFace repository](https://huggingface.co/SmilingWolf/wd-v1-4-vit-tagger) the first time you run it.(I haven't test this)
-         
-   - #### *DeepDanbooru*
-      1. Various model files can be found below.
-         - [DeepDanbooru models](https://github.com/KichangKim/DeepDanbooru/releases)
-         - [e621 model by 🐾Zack🐾#1984](https://discord.gg/BDFpq9Yb7K)
-            *(link contains NSFW contents!)*
+在webui根目录中使用下面的命令
 
-      1. Move the project folder containing the model and config to `models/deepdanbooru`
-
-      1. The file structure should look like:
-         ```
-         models/
-         └╴deepdanbooru/
-           ├╴deepdanbooru-v3-20211112-sgd-e28/
-           │ ├╴project.json
-           │ └╴...
-           │
-           ├╴deepdanbooru-v4-20200814-sgd-e30/
-           │ ├╴project.json
-           │ └╴...
-           │
-           ├╴e621-v3-20221117-sgd-e32/
-           │ ├╴project.json
-           │ └╴...
-           │
-           ...
-         ```
-
-1. Start or restart the WebUI.
-   - or you can press refresh button after *Interrogator* dropdown box.
-   - "You must close stable diffusion completely after installation and re-run it!"
+```shell
+$ git clone https://github.com/xiaolaa2/stable-diffusion-webui-wd14-tagger.git extensions/tagger
+```
 
 
-## Model comparison
-[Model comparison](docs/model-comparison.md)
+## 使用方法
 
-## Screenshot
-![Screenshot](docs/screenshot.png)
-
-Artwork made by [hecattaart](https://vk.com/hecattaart?w=wall-89063929_3767)
-
-## Copyright
-
-Public domain, except borrowed parts (e.g. `dbimutils.py`)
+* 在本地使用模型
+  - 从 [HuggingFace repository](https://huggingface.co/SmilingWolf/wd-v1-4-vit-tagger) 中手动下载对应的模型然后放到 `${webui的model路径}/wd-tagger/${模型名字}` 例如: `/home/stable-diffusion-webui-my/models/wd-tagger/wd-v1-4-vit-tagger-v2`
+  - 文件目录的格式应该如下:
+    ```
+     models/
+     └╴wd-tagger/
+       ├╴wd-v1-4-vit-tagger-v2/
+       │ ├╴model.onnx
+       │ ├╴selected_tags.csv
+       │ └╴...
+       │
+       ...
+    ```
