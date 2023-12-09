@@ -36,9 +36,11 @@ $ git clone https://github.com/xiaolaa2/stable-diffusion-webui-wd14-tagger.git e
        ...
     ```
 如果想要使用其它的wd-tagger、模型按照同样的方法建立文件夹并把模型文件放进去就好
+
 目前我只添加了：
 - wd14-convnextv2-v2
 - wd14-vit-v2
 - wd14-convnext-v2
 - wd14-swinv2-v2
+
 这几个模型，如果想要使用其它模型你需要修改tagger/utils.py文件，在里面的interrogators里添加你想要的模型
