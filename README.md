@@ -1,6 +1,6 @@
 # Tagger for [Automatic1111&#39;s WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui)、
 
-# 注意：本人已经不再研究这方面的内容了，所以如果遇到问题可能我无法提供帮助
+注意：本人已经不再研究这方面的内容了，所以如果遇到问题可能我无法提供帮助
 
 ## 相对于原版的改动
 
